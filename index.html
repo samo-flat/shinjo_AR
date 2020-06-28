@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <head>
-
+<title>Shinjo_AR</title>
 <meta charset="UTF_8"/>
-<script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
-<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
+<script src="js/aframe-master.min.js"></script>
+<script src="js/aframe-ar-nft.js"></script>
 
 <style>
   .arjs-loader {
@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(132,91,194,0.7);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -29,7 +29,10 @@
 <body style="margin : 0px; overflow: hidden;">
   <!-- minimal loader shown until image descriptors are loaded -->
   <div class="arjs-loader">
-    <div>読み込み中です...そのままお待ち下さい</div>
+        <p>
+      Now Loading...<br>
+      読み込み完了までお待ちください
+    </p>
   </div>
   <a-scene
     vr-mode-ui="enabled: false;"
@@ -40,7 +43,7 @@
     <!-- we use cors proxy to avoid cross-origin problems -->
     <a-nft
       type="nft"
-      url="marker/shinjo"
+      url="https://arjs-cors-proxy.herokuapp.com/https://cdn.glitch.com/8d99eec0-4479-4e11-9a80-9993963fc1ea%2FNFT"
       smooth="true"
       smoothCount="10"
       smoothTolerance=".01"
